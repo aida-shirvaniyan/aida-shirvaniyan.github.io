@@ -1,0 +1,418 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body, html {
+    scroll-behavior: smooth;
+    line-height: 1;
+    overflow-x: hidden;
+}
+
+ol, ul {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url('Font/Raleway-Regular.ttf');
+    src: url('Font/Raleway-Regular.ttf') format('truetype');
+}
+
+*, html {
+    font-family: Raleway;
+    scrollbar-width: none !important; /* Firefox 64 */
+}
+
+#Profile, #Projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+#Projects {
+    flex-wrap: wrap;
+}
+
+#Profile {
+    background-color: #031639;
+}
+
+.ProfilePic {
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 4px solid white;
+    transform: rotate(25deg);
+}
+
+#Profile img {
+    border: 4px solid white;
+    border-radius: 50%;
+
+}
+
+#Profile h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.animate__animated.animate__backInRight.First {
+    --animate-duration: 2s;
+}
+
+.animate__animated.animate__backInRight.Second {
+    --animate-duration: 4s;
+}
+
+#Profile h2 {
+    color: #8791a4;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.Social {
+    margin-top: 20px;
+}
+
+.Social li {
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+}
+
+.animate__animated.animate__bounceInUp.First {
+    --animate-duration: 6s;
+}
+
+.animate__animated.animate__bounceInUp.Second {
+    --animate-duration: 7s;
+}
+
+.animate__animated.animate__bounceInUp.Third {
+    --animate-duration: 8s;
+}
+
+.animate__animated.animate__bounceInUp.Forth {
+    --animate-duration: 9s;
+}
+
+#Projects h2 {
+    color: #304164;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+#Projects > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.container {
+    position: relative;
+}
+.container .card {
+    position: relative;
+    width: 22vw;
+    height: 470px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.container .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container:nth-child(1) .card:before {
+    background: #f3a8ee;
+}
+
+.container:nth-child(2) .card:before {
+    background: #31eacb;
+}
+
+.container:nth-child(3) .card:before {
+    background: #ffd175;
+
+}
+
+.container:nth-child(4) .card:before {
+    background: #f1828c;
+
+}
+
+.container .card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:after {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.container:nth-child(1) .card:after {
+    content: 'Shop';
+    color: rgba(255, 25, 232, 0.099)
+}
+
+.container:nth-child(2) .card:after {
+    content: 'Dashboard';
+    color: rgba(38, 255, 231, 0.2)
+}
+
+.container:nth-child(3) .card:after {
+    content: 'Crypto';
+    color: rgba(255, 175, 38, 0.2)
+}
+
+.container:nth-child(4) .card:after {
+    content: 'Landing';
+    color: rgba(255, 38, 38, 0.2)
+}
+
+.container .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.container .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(0%);
+
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 220px;
+}
+
+.container:nth-child(2) .card .imgBx img {
+    transform: translate(-50%, -50%);
+}
+
+.container:nth-child(4) .card .imgBx img {
+    transform: translate(-50%, -50%) rotate(15deg);
+}
+
+.container .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.container .card:hover .contentBx {
+    height: 220px;
+}
+
+.container .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+}
+
+.container .card .contentBx .size, .container .card .contentBx p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px 10px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .card .contentBx .size li{
+    margin-top: 5px;
+}
+.container .card .contentBx p {
+    padding: 0;
+}
+
+.container .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.container .card:hover .contentBx p {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+
+.container .card .contentBx p {
+    color: black;
+    display: block;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.container .card .contentBx .size li {
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    padding: 3px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container:nth-child(1) .card .contentBx .size li:hover, .container:nth-child(1) .card .contentBx a {
+    background: #ef64e6;
+}
+
+.container:nth-child(2) .card .contentBx .size li:hover, .container:nth-child(2) .card .contentBx a {
+    background: #4ee0c8;
+}
+
+.container:nth-child(3) .card .contentBx .size li:hover, .container:nth-child(3) .card .contentBx a {
+    background: #ffb66e;
+}
+
+.container:nth-child(4) .card .contentBx .size li:hover, .container:nth-child(4) .card .contentBx a {
+    background: #f1828c;
+}
+
+.container .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 6px;
+    margin: 10px 0;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+
+.container .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+
+}
+
+@media (max-width: 1050px) {
+    .container .card {
+        width: 30vw;
+    }
+    .container .card:hover .contentBx {
+        height: 270px;
+    }
+    #Projects h2 {
+        margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+        .container .card {
+            width: 45vw;
+        }
+        .container .card:hover .contentBx {
+            height: 270px;
+        }
+
+        #Projects h2 {
+            margin-top: 50px;
+        }
+    }
+
+    @media (max-width: 555px) {
+        .container .card {
+            width: 70vw;
+        }
+        .container .card:hover .contentBx {
+            height: 270px;
+        }
+        #Projects h2 {
+            margin-top: 50px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .container .card {
+            width: 80vw;
+        }
+        .container .card:hover .contentBx {
+            height: 280px;
+        }
+
+        #Projects h2 {
+            margin-top: 50px;
+        }
+    }
+}
