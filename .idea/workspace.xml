@@ -31,7 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shop/src/components/Store.module.css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shop" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -50,7 +50,7 @@
       <workItem from="1672297040907" duration="12270000" />
       <workItem from="1672340677685" duration="896000" />
       <workItem from="1672477756612" duration="50000" />
-      <workItem from="1673940931683" duration="7708000" />
+      <workItem from="1673940931683" duration="7939000" />
     </task>
     <servers />
   </component>
